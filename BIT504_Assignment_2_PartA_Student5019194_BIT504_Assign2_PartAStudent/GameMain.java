@@ -14,7 +14,7 @@ public class GameMain extends JPanel implements MouseListener{
 	public static final String TITLE = "Tic Tac Toe";
 
 	//constants for dimensions used for drawing
-	public static final int CELL_SIZE = 100;//cell width and height square
+	public static final int CELL_SIZE = 200;//cell width and height square
 	public static final int CANVAS_WIDTH = CELL_SIZE * COLS;//drawing canvas
 	public static final int CANVAS_HEIGHT = CELL_SIZE * ROWS;
 	
@@ -25,7 +25,7 @@ public class GameMain extends JPanel implements MouseListener{
 	//Naughts and Crosses are displayed inside a cell, with padding from border
 	public static final int CELL_PADDING = CELL_SIZE / 6;    
 	public static final int SYMBOL_SIZE = CELL_SIZE - CELL_PADDING * 2;    
-	public static final int SYMBOL_STROKE_WIDTH = 8;
+	public static final int SYMBOL_STROKE_WIDTH = 12;
 	
 	/*declare game object variables*/
 	// the game board 
@@ -64,7 +64,7 @@ public class GameMain extends JPanel implements MouseListener{
 		add(statusBar, BorderLayout.SOUTH);
 		
 		// account for statusBar height in overall height
-		setPreferredSize(new Dimension(CANVAS_WIDTH, CANVAS_HEIGHT + 30));
+		setPreferredSize(new Dimension(CANVAS_WIDTH, CANVAS_HEIGHT + 20));
 		
 		this.board = new Board();
 		
