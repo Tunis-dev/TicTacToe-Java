@@ -14,7 +14,7 @@ public class GameMain extends JPanel implements MouseListener{
 	public static final String TITLE = "Tic Tac Toe";
 
 	//constants for dimensions used for drawing
-	public static final int CELL_SIZE = 100;//cell width and height square
+	public static final int CELL_SIZE = 150;//cell width and height square
 	public static final int CANVAS_WIDTH = CELL_SIZE * COLS;//drawing canvas
 	public static final int CANVAS_HEIGHT = CELL_SIZE * ROWS;
 	
@@ -53,7 +53,7 @@ public class GameMain extends JPanel implements MouseListener{
 		    
 		// Setup the status bar (JLabel) to display status message       
 		statusBar = new JLabel("         ");       
-		statusBar.setFont(new Font(Font.DIALOG_INPUT, Font.BOLD, 14));       
+		statusBar.setFont(new Font(Font.DIALOG_INPUT, Font.BOLD, 20));       
 		statusBar.setBorder(BorderFactory.createEmptyBorder(2, 5, 4, 5));       
 		statusBar.setOpaque(true);       
 		statusBar.setBackground(Color.LIGHT_GRAY);  
@@ -114,12 +114,12 @@ public class GameMain extends JPanel implements MouseListener{
 			if (currentPlayer == Player.Cross) {   
 			
 				//TODO: use the status bar to display the message "X"'s Turn
-				statusBar.setText("X's Turn");
+				statusBar.setText("X it's your turn");
 				
 			} else {    
 				
 				//TODO: use the status bar to display the message "O"'s Turn
-				statusBar.setText("0's Turn");
+				statusBar.setText("0'it's your turn");
 				
 			}       
 			} else if (currentState == GameState.Draw) {          
